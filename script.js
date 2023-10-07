@@ -23,21 +23,29 @@ const selections = function (operatorName, symbol) {
   document.getElementById("secondNum").textContent = num2;
   document.getElementById("operator").textContent = symbol;
 
-  // switch (correctAns) {
-  //   case symbol === "+":
-  //     correctAns = num1 + num2;
-  //   case symbol === "-":
-  //     correctAns = num1 - num2;
-  //   case symbol === "/":
-  //     correctAns = num1 / num2;
-  //   case symbol === "x":
-  //     correctAns = num1 * num2;
-  // }
+  switch (symbol) {
+    case "+":
+      correctAns = num1 + num2;
+      break;
+    case "-":
+      correctAns = num1 - num2;
+      break;
+    case "/":
+      correctAns = num1 / num2;
+      break;
+    case "x":
+      correctAns = num1 * num2;
+      break;
+    // Handle other cases if needed
+    default:
+      // Handle the default case here (if symbol is not one of the expected values)
+      break;
+  }
 
-  if (symbol === "+") correctAns = num1 + num2;
-  if (symbol === "-") correctAns = num1 - num2;
-  if (symbol === "/") correctAns = num1 / num2;
-  if (symbol === "x") correctAns = num1 * num2;
+  // if (symbol === "+") correctAns = num1 + num2;
+  // if (symbol === "-") correctAns = num1 - num2;
+  // if (symbol === "/") correctAns = num1 / num2;
+  // if (symbol === "x") correctAns = num1 * num2;
 };
 
 additionEl.addEventListener("click", function () {
@@ -70,15 +78,16 @@ formEl.addEventListener("submit", function (e) {
   const scoreDisplay = document.getElementById("score");
   scoreDisplay.innerHTML = `Score: ${score}`;
   document.getElementById("input").value = "";
-  if (operator === "addition") {
-    document.getElementById("addition").click();
-  } else if (operator === "subtraction") {
-    document.getElementById("subtraction").click();
-  } else if (operator === "multiplication") {
-    document.getElementById("multiplication").click();
-  } else {
-    document.getElementById("division").click();
-  }
+  document.getElementById(operator).click();
+  // if (operator === "addition") {
+  //   document.getElementById("addition").click();
+  // } else if (operator === "subtraction") {
+  //   document.getElementById("subtraction").click();
+  // } else if (operator === "multiplication") {
+  //   document.getElementById("multiplication").click();
+  // } else {
+  //   document.getElementById("division").click();
+  // }
 });
 
 //Reset button
