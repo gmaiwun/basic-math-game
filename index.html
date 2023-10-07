@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiplication app</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <video autoplay muted loop id="myVideo">
+      <source src="./assets/video (2160p).mp4" type="video/mp4" />
+    </video>
+    <div class="game">
+      <div class="intro">
+        <h1>Hey!! Wanna gain some brain activity?</h1>
+        <p>Let's do some basic Math. The very basics. Make your pick</p>
+        <div class="testChoices">
+          <button type="submit" class="choiceElements" id="addition">
+            Addition
+          </button>
+          <button type="submit" class="choiceElements" id="subtraction">
+            Subtraction
+          </button>
+          <button type="submit" class="choiceElements" id="multiplication">
+            Multiplication
+          </button>
+          <button type="submit" class="choiceElements" id="division">
+            Division
+          </button>
+        </div>
+      </div>
+      <div class="wrapper hidden" id="gameArea">
+        <form class="form" id="form">
+          <div class="playerDetails">
+            <span id="PlayerName"></span>
+            <span class="score" id="score"></span>
+          </div>
+
+          <h1 id="question">
+            What is <span id="firstNum"></span> <span id="operator"></span>
+            <span id="secondNum"></span>
+          </h1>
+          <input
+            type="text"
+            class="input"
+            id="input"
+            placeholder="Enter your answer"
+            autofocus
+            autocomplete="off"
+          />
+          <button type="submit" class="btn">Submit</button>
+        </form>
+        <button type="submit" class="btn" id="reset">..RESET..</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
